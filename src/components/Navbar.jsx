@@ -9,13 +9,22 @@ const navLinks = [
       label: 'Home'
     },
     {
+      path: '/portfolio',
+      label: 'Portfolio'
+    },
+    {
+      path: '/book-call',
+      label: 'Book Call'
+    },
+    {
       path: '/about',
       label: 'About'
     },
     {
       path: '/contact',
       label: 'Contact'
-    }
+    },
+    
     // Add more navigation links as needed
   ]
 
