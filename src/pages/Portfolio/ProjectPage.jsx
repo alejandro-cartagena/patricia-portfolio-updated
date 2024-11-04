@@ -62,7 +62,8 @@ export default function ProjectPage() {
                                 original={image}
                                 thumbnail={image}
                                 width="1024"
-                                height="768"
+                                height="630"
+                                
                             >
                                 {({ ref, open }) => (
                                     <motion.div

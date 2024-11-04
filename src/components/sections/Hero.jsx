@@ -1,6 +1,6 @@
 import React from 'react'
 
-import heroBg from "../../assets/hero-bg.jpg"
+const heroImage = "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
 
 export default function Hero() {
   return (
@@ -34,9 +34,9 @@ export default function Hero() {
         {/* Right Column - Image */}
         <div className="w-full md:w-[45%]">
           <img
-            src=""
-            alt="Interior rendering showcase"
-            className="w-full h-auto rounded-lg shadow-xl"
+            src={heroImage}
+            alt="Modern architectural 3D visualization showing a minimalist interior space"
+            className="w-full h-auto rounded-lg shadow-xl object-cover"
             width={600}
             height={400}
           />
