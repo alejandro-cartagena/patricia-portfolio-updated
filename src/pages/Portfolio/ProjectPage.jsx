@@ -6,10 +6,48 @@ import ReactPlayer from 'react-player';
 import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 import projects from '../../data/portfolio';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { useEffect, useRef } from 'react';
+
+const cld = new Cloudinary({
+    cloud: {
+        cloudName: 'dlkhyfzoz'
+    }
+});
 
 export default function ProjectPage() {
     const { projectId } = useParams();
     const project = projects.find(p => p.id.toString() === projectId);
+
+    // Add refs for cloudinary
+    const cloudinaryRef = useRef();
+    const playerRefs = useRef([]);
+
+    // Initialize the video player
+    useEffect(() => {
+        // Load the Cloudinary script only once
+        if (cloudinaryRef.current) return;
+
+        cloudinaryRef.current = window.cloudinary;
+        
+        // Initialize each video player
+        playerRefs.current.forEach((playerRef, index) => {
+            if (playerRef) {
+                cloudinaryRef.current.videoPlayer(playerRef, {
+                    cloud_name: 'dlkhyfzoz',
+                    controls: true,
+                    fluid: true,
+                    aspectRatio: '16:9',
+                    objectFit: 'cover',
+                    colors: {
+                        base: '#000000',
+                        accent: '#3B82F6', // blue-500 to match your theme
+                        text: '#FFFFFF'
+                    }
+                });
+            }
+        });
+    }, []);
 
     if (!project) {
         return (
@@ -92,20 +130,18 @@ export default function ProjectPage() {
                 <div className="mb-12">
                     <h2 className="text-2xl font-bold mb-6">Videos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {project.videos.map((video, index) => (
+                        {project.videos.map((videoId, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className="aspect-w-16 aspect-h-9"
+                                className="relative aspect-video w-full overflow-hidden rounded-lg"
                             >
-                                <ReactPlayer
-                                    url={video}
-                                    width="100%"
-                                    height="100%"
-                                    controls
-                                    className="rounded-lg overflow-hidden"
+                                <video
+                                    ref={el => playerRefs.current[index] = el}
+                                    className="cld-video-player w-full h-full object-cover"
+                                    data-cld-public-id={videoId}
                                 />
                             </motion.div>
                         ))}

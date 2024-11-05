@@ -10,6 +10,7 @@ import ProjectPage from './pages/Portfolio/ProjectPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import BookCall from './pages/BookCall';
+import ServicesPage from './pages/ServicesPage';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} /> 
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:projectId" element={<ProjectPage />} />
+          <Route path="/services/:serviceId" element={<ServicesPage />} />
           <Route path="/book-call" element={<BookCall />} />
       </Routes>
       <Footer />

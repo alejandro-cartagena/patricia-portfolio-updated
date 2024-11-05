@@ -51,7 +51,7 @@ const ProjectCard = ({ project }) => {
           <h3 className="text-xl font-bold mb-2 text-gray-800">
             {project.title}
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600 line-clamp-4">
             {project.description}
           </p>
         </div>

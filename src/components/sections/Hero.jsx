@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const heroImage = "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
 
@@ -20,14 +21,14 @@ export default function Hero() {
             Transforming concepts into stunning visual realities. I bring your architectural dreams to life through expert 3D visualization and photorealistic rendering.
           </p>
           <div className="pt-4">
-            <a 
-              href="#contact"
-              className="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            <Link 
+              to="/portfolio"
+              className="inline-block px-8 py-3 bg-blue-600 text-white text-xl font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               tabIndex={0}
-              aria-label="Get Started"
+              aria-label="View Portfolio"
             >
-              Get Started
-            </a>
+              View Portfolio
+            </Link>
           </div>
         </div>
 

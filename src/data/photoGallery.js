@@ -38,6 +38,30 @@ import portsViewVideoThumbnail2 from "../assets/images/portsViewVideoThumbnail2.
 
 const photos = [
     {
+      src: portsViewImg1,
+      width: 1600,
+      height: 1067,  // 3:2 ratio
+      alt: 'Portsview property view 1',
+    },
+    {
+      src: portsViewImg2,
+      width: 1600,
+      height: 900,  // 16:9 ratio
+      alt: 'Portsview property view 2',
+    },
+    {
+      src: portsViewImg3,
+      width: 1600,
+      height: 1067,  // 1:1 ratio
+      alt: 'Portsview property view 3',
+    },
+    {
+      src: portsViewImg4,
+      width: 1600,
+      height: 1067,  // 3:2 ratio
+      alt: 'Portsview property view 4',
+    },
+    {
       src: blueMountainImg1,
       width: 1600,
       height: 900,  // 16:9 ratio
@@ -121,30 +145,7 @@ const photos = [
       height: 900,  // 1:1 ratio
       alt: 'Parking lot view 3',
     },
-    {
-      src: portsViewImg1,
-      width: 1600,
-      height: 1067,  // 3:2 ratio
-      alt: 'Portsview property view 1',
-    },
-    {
-      src: portsViewImg2,
-      width: 1600,
-      height: 900,  // 16:9 ratio
-      alt: 'Portsview property view 2',
-    },
-    {
-      src: portsViewImg3,
-      width: 1600,
-      height: 1067,  // 1:1 ratio
-      alt: 'Portsview property view 3',
-    },
-    {
-      src: portsViewImg4,
-      width: 1600,
-      height: 1067,  // 3:2 ratio
-      alt: 'Portsview property view 4',
-    },
+    
 ];
 
 export default photos;

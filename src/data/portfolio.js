@@ -38,26 +38,9 @@ import portsViewVideoThumbnail2 from "../assets/images/portsViewVideoThumbnail2.
 
 const projects = [
     {
-        id: "1",
-        title: "Blue Mountain",
-        description: "A contemporary living space design featuring clean lines, neutral colors, and natural light. The project emphasizes open space concepts and functional minimalism.",
-        images: [
-            blueMountainImg1,
-            blueMountainImg2,
-            blueMountainImg3,
-            blueMountainImg4,
-            blueMountainLobby,
-            blueMountainThumbnail
-        ],
-        videos: [
-            "https://youtube.com/watch?v=living-room-tour",
-            "https://vimeo.com/living-room-walkthrough"
-        ]
-    },
-    {
         id: "2", 
         title: "Portsview Aventura",
-        description: "An elegant master bathroom featuring marble surfaces, a freestanding tub, and custom lighting. The design combines luxury with practical functionality.",
+        description: "A stunning 3D visualization of Portsview Aventura's interior space, showcasing sophisticated modern design elements. The rendering features a dramatic spiral column as its centerpiece, complemented by meticulously detailed wall textures and architectural elements. The space is thoughtfully furnished with elegant couches and furniture, creating an inviting atmosphere. Advanced lighting techniques bring the scene to life with realistic shadows and ambient illumination, highlighting the premium finishes and architectural details throughout. This photorealistic rendering captures the luxurious essence of Miami's high-end residential design while maintaining a welcoming, contemporary feel.",
         images: [
             portsViewImg1,
             portsViewImg2,
@@ -67,41 +50,56 @@ const projects = [
             portsViewVideoThumbnail2
         ],
         videos: [
-            "https://youtube.com/watch?v=bathroom-showcase",
-            "https://vimeo.com/bathroom-details"
+            "Patricia Portfolio Videos/r2l7vo2yclwvce9ayskn",
+            "Patricia Portfolio Videos/kby9uglbgbrh8cgkwij4"
+        ]
+    },
+    {
+        id: "1",
+        title: "Blue Mountain",
+        description: "A photorealistic 3D rendering of a modern building interior showcasing a welcoming lobby space. The scene features a sleek TV mounted on the wall playing ambient content, with carefully crafted lighting and shadows that bring depth and realism to the space. The lobby is furnished with comfortable couches, stylish chairs, and a contemporary coffee table, creating an inviting seating area.",
+        images: [
+            blueMountainImg1,
+            blueMountainImg2,
+            blueMountainImg3,
+            blueMountainImg4,
+            blueMountainLobby,
+            blueMountainThumbnail
+        ],
+        videos: [
+            "Patricia Portfolio Videos/lzjclmbsr6ipfkwbtkxc"
         ]
     },
     {
         id: "3",
         title: "Pollo Tropical",
-        description: "A state-of-the-art kitchen with custom cabinetry, premium appliances, and an island centerpiece. Perfect blend of style and functionality.",
+        description: "A vibrant quick-service restaurant featuring a modern open-concept design. The space includes an efficient kitchen layout with state-of-the-art equipment, menu boards displaying the Caribbean-inspired menu items, and a welcoming dining area with comfortable seating arrangements. The interior combines warm wood tones with bright accent colors, creating an inviting atmosphere for customers. The counter service area is strategically designed for smooth customer flow, while the dining space offers seating and tables to accommodate various group sizes.",
         images: [
             polloTropicalVideoThumbnail1,
             polloTropicalVideoThumbnail2
         ],
         videos: [
-            "https://youtube.com/watch?v=kitchen-reveal",
-            "https://vimeo.com/kitchen-tour"
+            "Patricia Portfolio Videos/jd0kngby3ri9p2rygij0",
+            "Patricia Portfolio Videos/fmzuahmzlefnvpeeynyk"
         ]
     },
     {
         id: "4",
-        title: "Parkin Space",
-        description: "A modern office design emphasizing productivity and collaboration. Features open workspaces, meeting rooms, and relaxation areas.",
+        title: "Parking Space",
+        description: "A comprehensive exterior visualization showcasing a spacious outdoor parking lot complemented by a modern one-story office building. The parking lot features an efficient layout with clearly marked spaces, professional lighting fixtures, and smooth traffic flow patterns optimized for both employee and visitor parking. The rendering demonstrates the harmonious integration of functional parking design with attractive commercial architecture, highlighting how outdoor spaces and buildings can work together to create an inviting professional environment.",
         images: [
             parkingLotImg1,
             parkingLotImg2,
             parkingLotImg3
         ],
         videos: [
-            "https://youtube.com/watch?v=office-walkthrough",
-            "https://vimeo.com/office-showcase"
+            "Patricia Portfolio Videos/bmdajujyeszv3b0jmhf8",
         ]
     },
     {
         id: "5",
         title: "Modern Home",
-        description: "An urban oasis featuring landscaped gardens, outdoor seating, and stunning city views. Perfect blend of nature and modern design.",
+        description: "A contemporary residential exterior design showcasing a seamless blend of modern architecture and outdoor living. The property features a spacious garage, manicured lawn with decorative trees and landscaping, and a welcoming porch area furnished with comfortable outdoor seating and tables. Large windows throughout maximize natural light and create a connection between indoor and outdoor spaces.",
         images: [
             houseImg1,
             houseImg2,
@@ -109,20 +107,18 @@ const projects = [
             houseImg4
         ],
         videos: [
-            "https://youtube.com/watch?v=terrace-tour",
-            "https://vimeo.com/terrace-showcase"
+            
         ]
     },
     {
         id: "6",
         title: "Costa Rica Hotel",
-        description: "A sophisticated hotel lobby design combining luxury with comfort. Features custom furniture, artistic lighting, and premium finishes.",
+        description: "A breathtaking modern hotel nestled in the heart of Costa Rica, where sweeping glass walls invite the lush tropical surroundings inside. The building's elegant architecture makes a bold statement while staying true to its natural setting. Sunlight pours through expansive windows, creating bright, welcoming spaces that blur the line between indoors and out. Every angle of this design tells a story of contemporary luxury meeting Costa Rican warmth and beauty.",
         images: [
             building,
         ],
         videos: [
-            "https://youtube.com/watch?v=lobby-showcase",
-            "https://vimeo.com/lobby-walkthrough"
+            "Patricia Portfolio Videos/pbhkwondol7uhh30mzjk",
         ]
     },
     // ... more projects

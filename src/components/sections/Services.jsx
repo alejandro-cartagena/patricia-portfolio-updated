@@ -10,34 +10,16 @@ const photos = [
         alt: 'Modern minimalist living room with large windows',
       },
       {
-        src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3',
-        width: 1200,
-        height: 1200,
-        alt: 'Contemporary kitchen design',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-        width: 1600,
-        height: 1067,
-        alt: 'Luxury bathroom interior',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6',
+        src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9',
         width: 1600,
         height: 900,
-        alt: 'Modern architectural exterior',
+        alt: 'Luxury penthouse interior with city views',
       },
       {
-        src: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d',
-        width: 1200,
-        height: 1200,
-        alt: 'Minimalist bedroom design',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1600121848594-d8644e57abab',
+        src: 'https://images.unsplash.com/photo-1628744876497-eb30460be9f6',
         width: 1600,
-        height: 1067,
-        alt: 'Contemporary office space',
+        height: 900,
+        alt: '3D Floor Plans visualization',
       },
       {
         src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0',
@@ -46,28 +28,10 @@ const photos = [
         alt: 'Modern open concept living and dining area',
       },
       {
-        src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9',
-        width: 1600,
-        height: 900,
-        alt: 'Luxury penthouse interior with city views',
-      },
-      {
         src: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f',
         width: 1200,
         height: 1200,
         alt: 'Contemporary home office design',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1618219944342-824e40a13285',
-        width: 1600,
-        height: 1067,
-        alt: 'Minimalist outdoor living space',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea',
-        width: 1600,
-        height: 900,
-        alt: 'Modern kitchen with island and pendant lights',
       },
     ];
 
@@ -127,8 +91,8 @@ export default function Services() {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">360° Virtual Tours</h3>
-              <p className="text-gray-600">Create immersive virtual experiences that allow clients to explore spaces from every angle.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Virtual Tours</h3>
+              <p className="text-gray-600">Create videos that allow clients to explore spaces from every angle.</p>
             </div>
           </div>
 
@@ -145,7 +109,7 @@ export default function Services() {
             </div>
           </div>
 
-          {/* Card 6 - Replacing VR Visualization with Custom 3D Modeling */}
+          {/* Card 6 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1600607687644-c7171b42498f"
