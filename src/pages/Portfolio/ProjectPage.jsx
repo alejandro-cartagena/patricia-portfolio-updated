@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react';
 
 const cld = new Cloudinary({
     cloud: {
-        cloudName: 'dlkhyfzoz'
+        cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
     }
 });
 
@@ -34,7 +34,7 @@ export default function ProjectPage() {
         playerRefs.current.forEach((playerRef, index) => {
             if (playerRef) {
                 cloudinaryRef.current.videoPlayer(playerRef, {
-                    cloud_name: 'dlkhyfzoz',
+                    cloud_name: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
                     controls: true,
                     fluid: true,
                     aspectRatio: '16:9',

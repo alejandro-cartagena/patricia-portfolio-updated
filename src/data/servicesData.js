@@ -109,6 +109,7 @@ const servicesData = [
             "Obtain stakeholder buy-in with convincing visual representations.",
         ],
         images: [
+            buildingImg,
             houseImg1,
             houseImg2,
             houseImg3,
@@ -210,9 +211,10 @@ const servicesData = [
     },
     {
         id: "5",
-        cardThumbnail: bui,
+        cardThumbnail: buildingImg,
         title: "3D Animation",
         description: "Transform your vision into dynamic, cinematic experiences with our professional 3D animation services. We create fluid, photorealistic animations that bring architectural spaces and design concepts to life. Perfect for marketing campaigns, presentations, and showcasing the full potential of your projects through compelling storytelling.",
+        shortDescription: "Bring your designs to life with dynamic 3D animations that showcase your project in motion.",
         benefits: [
             "Create engaging visual narratives of your projects",
             "Showcase dynamic features and spatial flow",

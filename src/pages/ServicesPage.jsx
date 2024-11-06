@@ -1,13 +1,46 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { CheckIcon } from '@heroicons/react/24/solid';
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import useEmblaCarousel from 'embla-carousel-react';
 import servicesData from '../data/servicesData';
 
 export default function ServicesPage() {
     const { serviceId } = useParams();
     const service = servicesData.find(s => s.id.toString() === serviceId);
-    const [emblaRef] = useEmblaCarousel({ loop: true });
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+    // Add refs for cloudinary
+    const cloudinaryRef = useRef();
+    const playerRefs = useRef([]);
+
+    // Initialize the video players
+    useEffect(() => {
+        // Load the Cloudinary script only once
+        if (cloudinaryRef.current) return;
+
+        cloudinaryRef.current = window.cloudinary;
+        
+        // Initialize each video player
+        playerRefs.current.forEach((playerRef, index) => {
+            if (playerRef) {
+                cloudinaryRef.current.videoPlayer(playerRef, {
+                    cloud_name: 'dlkhyfzoz',
+                    controls: true,
+                    fluid: true,
+                    aspectRatio: '16:9',
+                    objectFit: 'cover',
+                    colors: {
+                        base: '#000000',
+                        accent: '#3B82F6',
+                        text: '#FFFFFF'
+                    }
+                });
+            }
+        });
+    }, []);
+
+    const handleScrollPrev = () => emblaApi?.scrollPrev();
+    const handleScrollNext = () => emblaApi?.scrollNext();
 
     if (!service) {
         return <div className="min-h-screen flex items-center justify-center">Service not found</div>;
@@ -54,21 +87,70 @@ export default function ServicesPage() {
             <div className="py-12">
                 <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8">Gallery</h2>
-                    <div className="overflow-hidden" ref={emblaRef}>
-                        <div className="flex">
-                            {service.images.map((image, index) => (
-                                <div key={index} className="flex-[0_0_100%] min-w-0">
-                                    <img 
-                                        src={image} 
-                                        alt={`${service.title} example ${index + 1}`}
-                                        className="w-full h-[400px] object-cover rounded-lg"
+                    <div className="relative">
+                        <div className="overflow-hidden" ref={emblaRef}>
+                            <div className="flex">
+                                {service.images.map((image, index) => (
+                                    <div 
+                                        key={index} 
+                                        className="relative min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] px-2"
+                                    >
+                                        <img 
+                                            src={image} 
+                                            alt={`${service.title} example ${index + 1}`}
+                                            className="w-full h-[400px] object-cover rounded-lg"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Navigation Buttons */}
+                        <button
+                            onClick={handleScrollPrev}
+                            onKeyDown={(e) => e.key === 'Enter' && handleScrollPrev()}
+                            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            aria-label="Previous image"
+                            tabIndex={0}
+                        >
+                            <ChevronLeftIcon className="w-6 h-6 text-gray-800" />
+                        </button>
+                        
+                        <button
+                            onClick={handleScrollNext}
+                            onKeyDown={(e) => e.key === 'Enter' && handleScrollNext()}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            aria-label="Next image"
+                            tabIndex={0}
+                        >
+                            <ChevronRightIcon className="w-6 h-6 text-gray-800" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Videos Section */}
+            {service.videoLinks && service.videoLinks.length > 0 && (
+                <div className="py-12 bg-gray-50">
+                    <div className="max-w-6xl mx-auto px-4">
+                        <h2 className="text-3xl font-bold mb-8">Videos</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {service.videoLinks.map((videoId, index) => (
+                                <div
+                                    key={index}
+                                    className="relative aspect-video w-full overflow-hidden rounded-lg shadow-lg"
+                                >
+                                    <video
+                                        ref={el => playerRefs.current[index] = el}
+                                        className="cld-video-player w-full h-full object-cover"
+                                        data-cld-public-id={videoId}
                                     />
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-            </div>
+            )}
 
             {/* FAQ Accordion */}
             <div className="bg-gray-50 py-12">

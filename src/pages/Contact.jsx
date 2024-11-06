@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast'; // Optional but recommended for notifications
 
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -36,7 +38,7 @@ const Contact = () => {
 
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('access_key', 'f6da9140-4007-49f8-826f-424b9d592f97'); // Replace with your Web3Forms access key
+      formDataToSend.append('access_key', WEB3FORMS_KEY); // Replace with your Web3Forms access key
       
       // Append form fields
       Object.entries(formData).forEach(([key, value]) => {
