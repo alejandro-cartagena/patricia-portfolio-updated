@@ -40,7 +40,7 @@ const projects = [
     {
         id: "2", 
         title: "Portsview Aventura",
-        description: "A stunning 3D visualization of Portsview Aventura's interior space, showcasing sophisticated modern design elements. The rendering features a dramatic spiral column as its centerpiece, complemented by meticulously detailed wall textures and architectural elements. The space is thoughtfully furnished with elegant couches and furniture, creating an inviting atmosphere. Advanced lighting techniques bring the scene to life with realistic shadows and ambient illumination, highlighting the premium finishes and architectural details throughout. This photorealistic rendering captures the luxurious essence of Miami's high-end residential design while maintaining a welcoming, contemporary feel.",
+        description: "A sophisticated 3D visualization of Portsview Aventura's interior space, featuring a dramatic spiral column centerpiece. The space combines modern design elements with elegant furnishings and premium finishes. Advanced lighting techniques enhance the photorealistic quality, creating an inviting atmosphere that embodies Miami's luxury residential aesthetic.",
         images: [
             portsViewImg1,
             portsViewImg2,
@@ -73,7 +73,7 @@ const projects = [
     {
         id: "3",
         title: "Pollo Tropical",
-        description: "A vibrant quick-service restaurant featuring a modern open-concept design. The space includes an efficient kitchen layout with state-of-the-art equipment, menu boards displaying the Caribbean-inspired menu items, and a welcoming dining area with comfortable seating arrangements. The interior combines warm wood tones with bright accent colors, creating an inviting atmosphere for customers. The counter service area is strategically designed for smooth customer flow, while the dining space offers seating and tables to accommodate various group sizes.",
+        description: "A modern quick-service restaurant visualization featuring an open-concept design with an efficient kitchen layout and welcoming dining area. The interior combines warm wood tones with bright accents, while the space is optimized for smooth customer flow with strategic seating arrangements and clear menu displays.",
         images: [
             polloTropicalVideoThumbnail1,
             polloTropicalVideoThumbnail2
@@ -86,7 +86,7 @@ const projects = [
     {
         id: "4",
         title: "Parking Space",
-        description: "A comprehensive exterior visualization showcasing a spacious outdoor parking lot complemented by a modern one-story office building. The parking lot features an efficient layout with clearly marked spaces, professional lighting fixtures, and smooth traffic flow patterns optimized for both employee and visitor parking. The rendering demonstrates the harmonious integration of functional parking design with attractive commercial architecture, highlighting how outdoor spaces and buildings can work together to create an inviting professional environment.",
+        description: "An exterior visualization of a modern commercial space featuring a well-designed parking lot and single-story office building. The rendering showcases professional lighting, clear traffic patterns, and efficient space utilization, demonstrating how functional design can create an inviting professional environment.",
         images: [
             parkingLotImg1,
             parkingLotImg2,
@@ -99,7 +99,7 @@ const projects = [
     {
         id: "5",
         title: "Modern Home",
-        description: "A contemporary residential exterior design showcasing a seamless blend of modern architecture and outdoor living. The property features a spacious garage, manicured lawn with decorative trees and landscaping, and a welcoming porch area furnished with comfortable outdoor seating and tables. Large windows throughout maximize natural light and create a connection between indoor and outdoor spaces.",
+        description: "A contemporary residential visualization highlighting modern architecture with thoughtful outdoor integration. The design features large windows for natural light, a spacious garage, and carefully planned landscaping. The exterior includes comfortable outdoor living spaces that complement the home's modern aesthetic.",
         images: [
             houseImg1,
             houseImg2,
@@ -113,7 +113,7 @@ const projects = [
     {
         id: "6",
         title: "Costa Rica Hotel",
-        description: "A breathtaking modern hotel nestled in the heart of Costa Rica, where sweeping glass walls invite the lush tropical surroundings inside. The building's elegant architecture makes a bold statement while staying true to its natural setting. Sunlight pours through expansive windows, creating bright, welcoming spaces that blur the line between indoors and out. Every angle of this design tells a story of contemporary luxury meeting Costa Rican warmth and beauty.",
+        description: "A modern hotel design showcasing the integration of contemporary architecture with Costa Rica's tropical environment. Floor-to-ceiling windows maximize natural light and views, while the building's elegant structure creates a perfect balance between luxury accommodations and natural surroundings.",
         images: [
             building,
         ],

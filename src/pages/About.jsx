@@ -51,9 +51,9 @@ export default function About() {
       </section>
 
       {/* Expertise Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Areas of Expertise</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 md:mb-12">Areas of Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {expertise.map((item) => (
               <div key={item.title} className="bg-white p-6 rounded-lg shadow-sm">
@@ -86,7 +86,7 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16">
+      <section className="py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Professional Journey</h2>
           <div className="space-y-8">
@@ -116,7 +116,7 @@ export default function About() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Client Testimonials</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -132,7 +132,7 @@ export default function About() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-16">
+      <section className="py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Bring Your Vision to Life?</h2>
           <p className="text-xl text-gray-600 mb-8">Let's discuss how we can transform your ideas into reality</p>

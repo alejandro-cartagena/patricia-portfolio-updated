@@ -4,11 +4,11 @@ export default function Benefits() {
   return (
     <section className="py-10 md:py-24 bg-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose <span className="text-blue-400">PJ</span> Renders?</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8">
           {/* Quality */}
           <div className="flex items-start p-6 gap-8">
             <span className="text-2xl font-bold text-blue-400">01</span>
