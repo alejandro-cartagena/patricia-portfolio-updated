@@ -20,7 +20,7 @@ export default function Benefits() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Unmatched Quality</h3>
-                <p className="text-gray-300">Delivering photorealistic renders that exceed industry standards, with meticulous attention to detail and lighting.</p>
+                <p className="text-gray-300">Delivering photorealistic renders with meticulous attention to detail and lighting.</p>
               </div>
             </div>
           </div>
