@@ -65,7 +65,7 @@ export default function Footer() {
                   patriciaejaramillo@gmail.com
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a 
                   href="tel:+13059921194"
                   className="hover:text-blue-400 transition-colors"
@@ -74,7 +74,7 @@ export default function Footer() {
                 >
                   +1 (305)992-1194
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
