@@ -1,21 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCube, FaDraftingCompass, FaCogs } from 'react-icons/fa';
 
-const heroImage = "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+import heroImage from "../../assets/images/heroImg.jpg";
 
 export default function Hero() {
   return (
-    <div className="relative h-[calc(90vh-64px)] flex items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Floating Icons */}
-      <FaCube className="hidden md:block absolute text-blue-600 text-4xl animate-float top-10 left-10" aria-hidden="true" />
-      <FaDraftingCompass className="hidden md:block absolute text-blue-600 text-4xl animate-float top-20 right-20" aria-hidden="true" />
-      <FaCogs className="hidden md:block absolute text-blue-600 text-4xl animate-float bottom-10 left-1/2 transform -translate-x-1/2" aria-hidden="true" />
+    <div className="relative min-h-[calc(90vh-64px)] pb-10 md:pb-0 flex items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+      <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text Content */}
-        <div className="w-full md:w-[45%] space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.625] font-bold text-gray-900" style={{ lineHeight: "1.1" }}>
+        <div className="w-full md:w-[45%] space-y-4 md:space-y-6">
+          <h1 className="text-4xl  md:text-5xl lg:text-6xl leading-[1.625] font-bold text-gray-900" style={{ lineHeight: "1.1" }}>
             <span className="text-blue-600 text-4xl">PJ Renders</span>
             <br />
             3D Rendering &
@@ -38,7 +33,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column - Image */}
-        <div className="w-full md:w-[45%]">
+        <div className="w-full md:w-[45%] mt-8 md:mt-0">
           <img
             src={heroImage}
             alt="Modern architectural 3D visualization showing a minimalist interior space"

@@ -83,7 +83,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto py-32 px-4">
+    <div className="max-w-2xl mx-auto py-10 md:py-32 px-4">
       <div className="space-y-6">
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="text-gray-600 text-lg">

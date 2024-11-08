@@ -17,9 +17,9 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="w-full py-16 bg-gray-50">
+    <section className="w-full py-10 md:py-16 bg-gray-50">
       <div className="px-4">
-        <h2 className="text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           3D Rendering Gallery
         </h2>
         

@@ -52,10 +52,15 @@ const videoLinks = [
     "Patricia Portfolio Videos/pbhkwondol7uhh30mzjk"
   ];
 
+  // Services Thumbnails
+  import interiorRenderingThumbnail from "../assets/images/interiorRenderingThumbnail.jpeg";
+  import exteriorRenderingThumbnail from "../assets/images/exteriorRenderingThumbnail.jpeg";
+  import threeDFloorPlansThumbnail from "../assets/images/threeDFloorPlansThumbnail.jpg";
+
 const servicesData = [
     {
         id: "1",
-        cardThumbnail: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        cardThumbnail: interiorRenderingThumbnail,
         title: "Interior Rendering",
         shortDescription: "Transform your interior concepts into 3D renderings that showcase every detail of your design vision.",
         description: "Transform your interior spaces into photorealistic 3D visualizations. Our interior rendering service brings your design concepts to life with stunning detail, accurate lighting, textures, and materials. Perfect for previewing renovation projects, staging virtual properties, or showcasing architectural designs before construction begins.",
@@ -77,7 +82,6 @@ const servicesData = [
             blueMountainImg4,
             blueMountainLobby,
             polloTropicalVideoThumbnail1,
-            polloTropicalVideoThumbnail2,
         ],
         videoLinks: [],
         faq: [
@@ -97,7 +101,7 @@ const servicesData = [
     },
     {
         id: "2",
-        cardThumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+        cardThumbnail: exteriorRenderingThumbnail,
         title: "Exterior Rendering",
         shortDescription: "Create stunning architectural visualizations that bring your exterior designs to life with realistic materials and lighting.",
         description: "Create stunning visualizations of your building exteriors with our photorealistic 3D rendering service. We specialize in bringing architectural designs to life with precise attention to materials, landscaping, lighting, and environmental context. Ideal for real estate marketing, architectural presentations, or pre-construction visualization.",
@@ -139,7 +143,7 @@ const servicesData = [
     },
     {
         id: "3",
-        cardThumbnail: "https://images.unsplash.com/photo-1628744876497-eb30460be9f6",
+        cardThumbnail: threeDFloorPlansThumbnail,
         title: "3D Floor Plans",
         shortDescription: "Transform traditional blueprints into detailed 3D floor plans that help clients easily visualize layouts and spatial relationships.",
         description: "Transform traditional 2D floor plans into engaging 3D visualizations that help clients truly understand spatial relationships and flow. Our detailed 3D floor plans provide an intuitive bird's-eye view of interior layouts, making it easier to visualize room arrangements, traffic patterns, and overall space utilization.",
@@ -172,43 +176,43 @@ const servicesData = [
             }
         ]
     },
-    {
-        id: "4",
-        cardThumbnail: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        title: "Virtual Tours",
-        shortDescription: "Create videos that allow clients to explore spaces from every angle.",
-        description: "Immerse your clients in photorealistic virtual environments through engaging video walkthroughs. These high-quality visualizations let viewers explore spaces through fluid video tours, creating an impactful and memorable experience. Perfect for real estate marketing, hospitality showcases, and pre-construction presentations.",
-        benefits: [
-            "Provide immersive, interactive experiences of unbuilt spaces",
-            "Allow clients to explore properties remotely at their convenience",
-            "Reduce the need for physical site visits during sales process",
-            "Create engaging content for websites and marketing materials",
-            "Stand out from competitors with innovative presentation methods"
-        ],
-        images: [
-            portsViewImg3,
-            portsViewImg4,
-            blueMountainImg3,
-            blueMountainImg4
-        ],
-        videoLinks: [
-            "Patricia Portfolio Videos/kby9uglbgbrh8cgkwij4"
-        ],
-        faq: [
-            {
-                question: "What is a 360° virtual tour?",
-                answer: "A 360° virtual tour is an interactive visualization that allows viewers to explore a space from every angle, as if they were actually there. Users can pan, rotate, and zoom to examine different areas of the space, creating an immersive experience that's accessible from any device."
-            },
-            {
-                question: "How can virtual tours be accessed and shared?",
-                answer: "Virtual tours can be embedded on websites, shared via links, integrated into social media, or included in marketing materials. They're compatible with most devices including computers, smartphones, and VR headsets, making them easily accessible to your target audience."
-            },
-            {
-                question: "How much do 360° virtual tours cost?",
-                answer: "The cost of 360° virtual tours varies based on the size and complexity of the space, number of viewpoints needed, level of detail required, interactive features desired, and customization requirements. Contact us to discuss your project needs for a detailed quote."
-            }
-        ]
-    },
+    // {
+    //     id: "4",
+    //     cardThumbnail: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+    //     title: "Virtual Tours",
+    //     shortDescription: "Create videos that allow clients to explore spaces from every angle.",
+    //     description: "Immerse your clients in photorealistic virtual environments through engaging video walkthroughs. These high-quality visualizations let viewers explore spaces through fluid video tours, creating an impactful and memorable experience. Perfect for real estate marketing, hospitality showcases, and pre-construction presentations.",
+    //     benefits: [
+    //         "Provide immersive, interactive experiences of unbuilt spaces",
+    //         "Allow clients to explore properties remotely at their convenience",
+    //         "Reduce the need for physical site visits during sales process",
+    //         "Create engaging content for websites and marketing materials",
+    //         "Stand out from competitors with innovative presentation methods"
+    //     ],
+    //     images: [
+    //         portsViewImg3,
+    //         portsViewImg4,
+    //         blueMountainImg3,
+    //         blueMountainImg4
+    //     ],
+    //     videoLinks: [
+    //         "Patricia Portfolio Videos/kby9uglbgbrh8cgkwij4"
+    //     ],
+    //     faq: [
+    //         {
+    //             question: "What is a 360° virtual tour?",
+    //             answer: "A 360° virtual tour is an interactive visualization that allows viewers to explore a space from every angle, as if they were actually there. Users can pan, rotate, and zoom to examine different areas of the space, creating an immersive experience that's accessible from any device."
+    //         },
+    //         {
+    //             question: "How can virtual tours be accessed and shared?",
+    //             answer: "Virtual tours can be embedded on websites, shared via links, integrated into social media, or included in marketing materials. They're compatible with most devices including computers, smartphones, and VR headsets, making them easily accessible to your target audience."
+    //         },
+    //         {
+    //             question: "How much do 360° virtual tours cost?",
+    //             answer: "The cost of 360° virtual tours varies based on the size and complexity of the space, number of viewpoints needed, level of detail required, interactive features desired, and customization requirements. Contact us to discuss your project needs for a detailed quote."
+    //         }
+    //     ]
+    // },
     {
         id: "5",
         cardThumbnail: buildingImg,
@@ -243,40 +247,40 @@ const servicesData = [
             }
         ]
     },
-    {
-        id: "6",
-        cardThumbnail: "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-        title: "Custom 3D Modeling",
-        shortDescription: "Create detailed 3D models of architectural elements, furniture, and custom fixtures to your exact specifications.",
-        description: "Our expert 3D modeling service creates detailed, customized assets for any architectural or design project. From furniture and fixtures to complete building exteriors, we deliver high-quality, photorealistic 3D models that meet your exact specifications. Ideal for product visualization, architectural details, and custom design elements.",
-        benefits: [
-            "Create unique, project-specific design elements",
-            "Visualize custom furniture and fixtures",
-            "Generate accurate material and finish representations",
-            "Develop detailed architectural components",
-            "Produce models for multiple visualization purposes"
-        ],
-        images: [
-            houseImg1,
-            houseImg2,
-            parkingLotImg1,
-            parkingLotImg2
-        ],
-        faq: [
-            {
-                question: "What can be created with custom 3D modeling?",
-                answer: "We can create virtually any 3D asset including furniture, architectural elements, fixtures, products, decorative items, and complete building models. Our modeling service can accommodate both standard architectural components and unique, custom-designed elements."
-            },
-            {
-                question: "What file formats do you provide for 3D models?",
-                answer: "We can deliver 3D models in various formats including .obj, .fbx, .3ds, .max, and others to ensure compatibility with your preferred software. Models can be optimized for different uses such as rendering, animation, or real-time visualization."
-            },
-            {
-                question: "How much does custom 3D modeling cost?",
-                answer: "Custom 3D modeling costs vary based on the complexity of the objects or structures, level of detail required, texturing needs, intended use of the models, and project timeline. Contact us to discuss your specific requirements for a tailored quote."
-            }
-        ]
-    }
+    // {
+    //     id: "6",
+    //     cardThumbnail: "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+    //     title: "Custom 3D Modeling",
+    //     shortDescription: "Create detailed 3D models of architectural elements, furniture, and custom fixtures to your exact specifications.",
+    //     description: "Our expert 3D modeling service creates detailed, customized assets for any architectural or design project. From furniture and fixtures to complete building exteriors, we deliver high-quality, photorealistic 3D models that meet your exact specifications. Ideal for product visualization, architectural details, and custom design elements.",
+    //     benefits: [
+    //         "Create unique, project-specific design elements",
+    //         "Visualize custom furniture and fixtures",
+    //         "Generate accurate material and finish representations",
+    //         "Develop detailed architectural components",
+    //         "Produce models for multiple visualization purposes"
+    //     ],
+    //     images: [
+    //         houseImg1,
+    //         houseImg2,
+    //         parkingLotImg1,
+    //         parkingLotImg2
+    //     ],
+    //     faq: [
+    //         {
+    //             question: "What can be created with custom 3D modeling?",
+    //             answer: "We can create virtually any 3D asset including furniture, architectural elements, fixtures, products, decorative items, and complete building models. Our modeling service can accommodate both standard architectural components and unique, custom-designed elements."
+    //         },
+    //         {
+    //             question: "What file formats do you provide for 3D models?",
+    //             answer: "We can deliver 3D models in various formats including .obj, .fbx, .3ds, .max, and others to ensure compatibility with your preferred software. Models can be optimized for different uses such as rendering, animation, or real-time visualization."
+    //         },
+    //         {
+    //             question: "How much does custom 3D modeling cost?",
+    //             answer: "Custom 3D modeling costs vary based on the complexity of the objects or structures, level of detail required, texturing needs, intended use of the models, and project timeline. Contact us to discuss your specific requirements for a tailored quote."
+    //         }
+    //     ]
+    // }
     
 ];
 

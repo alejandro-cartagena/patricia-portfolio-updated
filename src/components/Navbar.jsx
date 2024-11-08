@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -30,6 +30,7 @@ const navLinks = [
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -60,7 +61,11 @@ function Navbar() {
               <Link
                 key={label}
                 to={path}
-                className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  location.pathname === path 
+                    ? 'border-b-2 border-blue-600 text-blue-600' 
+                    : 'text-gray-600 hover:text-blue-600'
+                }`}
                 aria-label={label}
                 tabIndex={0}
               >
@@ -99,7 +104,9 @@ function Navbar() {
               <Link
                 key={label}
                 to={path}
-                className="block px-3 py-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                className={`block px-3 py-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200 ${
+                  location.pathname === path ? 'border-l-4 border-blue-600 text-blue-600 bg-blue-50' : ''
+                }`}
                 aria-label={label}
                 tabIndex={0}
                 onClick={() => setIsMenuOpen(false)}
