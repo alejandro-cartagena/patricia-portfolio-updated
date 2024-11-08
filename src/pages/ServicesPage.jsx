@@ -51,7 +51,7 @@ export default function ServicesPage() {
             {/* Hero Section */}
             <div 
                 className="relative h-[60vh] bg-cover bg-center"
-                style={{ backgroundImage: `url(${service.images[0]})` }}
+                style={{ backgroundImage: `url(${service.cardThumbnail})` }}
             >
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 flex items-center justify-center">
