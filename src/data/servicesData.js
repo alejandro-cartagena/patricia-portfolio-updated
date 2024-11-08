@@ -59,7 +59,7 @@ const videoLinks = [
 
 const servicesData = [
     {
-        id: "1",
+        id: "interior-rendering",
         cardThumbnail: interiorRenderingThumbnail,
         title: "Interior Rendering",
         shortDescription: "Transform your interior concepts into 3D renderings that showcase every detail of your design vision.",
@@ -100,7 +100,7 @@ const servicesData = [
         ]
     },
     {
-        id: "2",
+        id: "exterior-rendering",
         cardThumbnail: exteriorRenderingThumbnail,
         title: "Exterior Rendering",
         shortDescription: "Create stunning architectural visualizations that bring your exterior designs to life with realistic materials and lighting.",
@@ -142,7 +142,7 @@ const servicesData = [
         ]
     },
     {
-        id: "3",
+        id: "3d-floor-plans",
         cardThumbnail: threeDFloorPlansThumbnail,
         title: "3D Floor Plans",
         shortDescription: "Transform traditional blueprints into detailed 3D floor plans that help clients easily visualize layouts and spatial relationships.",
@@ -214,7 +214,7 @@ const servicesData = [
     //     ]
     // },
     {
-        id: "5",
+        id: "3d-animation",
         cardThumbnail: buildingImg,
         title: "3D Animation",
         description: "Transform your vision into dynamic, cinematic experiences with our professional 3D animation services. We create fluid, photorealistic animations that bring architectural spaces and design concepts to life. Perfect for marketing campaigns, presentations, and showcasing the full potential of your projects through compelling storytelling.",
