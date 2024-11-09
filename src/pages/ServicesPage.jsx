@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -13,17 +13,35 @@ export default function ServicesPage() {
     const cloudinaryRef = useRef();
     const playerRefs = useRef([]);
 
+    // Add this state to track script loading
+    const [isCloudinaryLoaded, setIsCloudinaryLoaded] = useState(false);
+
     // Initialize the video players
     useEffect(() => {
-        // Load the Cloudinary script only once
-        if (cloudinaryRef.current) return;
+        // Load the Cloudinary script if not already loaded
+        if (!cloudinaryRef.current && !window.cloudinary) {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/cloudinary-video-player@1.9.9/dist/cld-video-player.min.js';
+            script.async = true;
+            script.onload = () => {
+                cloudinaryRef.current = window.cloudinary;
+                setIsCloudinaryLoaded(true);
+            };
+            document.body.appendChild(script);
+        } else if (window.cloudinary) {
+            cloudinaryRef.current = window.cloudinary;
+            setIsCloudinaryLoaded(true);
+        }
+    }, []);
 
-        cloudinaryRef.current = window.cloudinary;
-        
+    // Separate useEffect for player initialization
+    useEffect(() => {
+        if (!isCloudinaryLoaded || !cloudinaryRef.current) return;
+
         // Initialize each video player
         playerRefs.current.forEach((playerRef, index) => {
             if (playerRef) {
-                cloudinaryRef.current.videoPlayer(playerRef, {
+                const player = cloudinaryRef.current.videoPlayer(playerRef, {
                     cloud_name: 'dlkhyfzoz',
                     controls: true,
                     fluid: true,
@@ -35,9 +53,14 @@ export default function ServicesPage() {
                         text: '#FFFFFF'
                     }
                 });
+
+                // Optional: Return cleanup function to destroy player
+                return () => {
+                    if (player) player.destroy();
+                };
             }
         });
-    }, []);
+    }, [isCloudinaryLoaded, service?.videoLinks]); // Add service.videoLinks as dependency
 
     const handleScrollPrev = () => emblaApi?.scrollPrev();
     const handleScrollNext = () => emblaApi?.scrollNext();
