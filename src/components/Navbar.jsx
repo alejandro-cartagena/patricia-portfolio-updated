@@ -82,6 +82,9 @@ function Navbar() {
     setMobileExpandedSection(mobileExpandedSection === 'services' ? null : 'services')
   }
 
+  // Add this helper function near the top of the Navbar component
+  const isPortfolioRoute = location.pathname.startsWith('/portfolio')
+
   return (
     <nav className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +105,9 @@ function Navbar() {
                 <Link
                   to={hasDropdown ? '#' : path}
                   className={`transition-colors duration-200 font-medium ${
-                    (hasDropdown && isServiceRoute) || location.pathname === path 
+                    (hasDropdown && isServiceRoute) || 
+                    location.pathname === path ||
+                    (path === '/portfolio' && isPortfolioRoute)
                       ? 'border-b-2 border-blue-600 text-blue-600' 
                       : 'text-gray-600 hover:text-blue-600'
                   }`}
@@ -226,7 +231,9 @@ function Navbar() {
                   <Link
                     to={path}
                     className={`block px-3 py-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-50 ${
-                      location.pathname === path ? 'border-l-4 border-blue-600 text-blue-600 bg-blue-50' : ''
+                      location.pathname === path || (path === '/portfolio' && isPortfolioRoute)
+                        ? 'border-l-4 border-blue-600 text-blue-600 bg-blue-50' 
+                        : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
