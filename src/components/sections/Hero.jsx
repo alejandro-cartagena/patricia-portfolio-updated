@@ -5,7 +5,7 @@ import heroImage from "../../assets/images/heroImg.jpg";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-[calc(90vh-64px)] pb-10 md:pb-0 flex items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-[calc(100vh-64px)] pb-10 md:pb-0 flex items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text Content */}
