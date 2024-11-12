@@ -39,11 +39,11 @@ export default function About() {
 
           {/* Text Column */}
           <div className="space-y-2 md:space-y-6">
-            <h2 className="text-blue-600 text-2xl font-bold">About</h2>
-            <h1 className="text-4xl pb-2 md:pb-0 font-bold text-gray-900">
+            <h2 className="text-center md-text:left text-blue-600 text-2xl font-bold">About</h2>
+            <h1 className="text-center md-text:left text-4xl pb-2 md:pb-0 font-bold text-gray-900">
               Meet Patricia Jaramillo
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            <p className="text-center md-text:left text-lg md:text-xl text-gray-600 leading-relaxed">
               Patricia has over 20 years of experience in the construction industry. She began her career working at the municipality of Miami Beach. Her work with the municipality was the catalyst for her to pursue Interior Design and ultimately led to her finding her passion in 3D rendering. Being able to assist clients in visualizing their completed projects prior to even breaking ground has been an incredibly rewarding experience. Patricia enjoys showing her clients various adaptations as to how their vision can be brought to life through her skills as a 3D Renderer. Notable clients include Bonet International, Pollo Tropical, Estrutura LLC and many more.
             </p>
           </div>

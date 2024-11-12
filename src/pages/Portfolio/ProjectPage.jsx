@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import 'photoswipe/dist/photoswipe.css';
 import ReactPlayer from 'react-player';
@@ -8,6 +8,7 @@ import Masonry from 'react-masonry-css';
 import projects from '../../data/portfolio';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { useEffect, useRef } from 'react';
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 const cld = new Cloudinary({
     cloud: {
@@ -18,6 +19,7 @@ const cld = new Cloudinary({
 export default function ProjectPage() {
     const { projectId } = useParams();
     const project = projects.find(p => p.id.toString() === projectId);
+    const navigate = useNavigate();
 
     // Add refs for cloudinary
     const cloudinaryRef = useRef();
@@ -65,7 +67,15 @@ export default function ProjectPage() {
         >
             {/* Hero Section */}
             <div className="mb-12">
-                <div className="relative mb-8 pb-4">
+                <div className="relative mb-8 pb-4 flex flex-col items-center md:items-start">
+                    <button 
+                        onClick={() => navigate('/portfolio')}
+                        className="mb-4 flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+                        aria-label="Go back to portfolio"
+                    >
+                        <ArrowLeftIcon className="h-5 w-5 mr-2" />
+                        Back to Portfolio
+                    </button>
                     <motion.h1 
                         initial={{ y: -20 }}
                         animate={{ y: 0 }}
@@ -73,16 +83,16 @@ export default function ProjectPage() {
                     >
                         {project.title}
                     </motion.h1>
-                    <div className="absolute left-0 bottom-0 w-52 h-1 bg-blue-500"></div>
+                    <div className="absolute md:left-0 bottom-0 w-52 h-1 bg-blue-500"></div>
                 </div>
-                <div className="prose prose-lg max-w-3xl text-gray-600 text-xl">
+                <div className="text-center md:text-left prose prose-lg max-w-3xl text-gray-600 text-xl">
                     {project.description}
                 </div>
             </div>
 
             {/* Image Gallery */}
             <div className="mb-12">
-                <h2 className="text-2xl font-bold mb-6">Gallery</h2>
+                <h2 className="text-center md:text-left text-2xl font-bold mb-6">Gallery</h2>
                 <Gallery>
                     <Masonry
                         breakpointCols={{
@@ -128,7 +138,7 @@ export default function ProjectPage() {
             {/* Videos Section */}
             {project.videos && project.videos.length > 0 && (
                 <div className="mb-12">
-                    <h2 className="text-2xl font-bold mb-6">Videos</h2>
+                    <h2 className="text-center md-text:left text-2xl font-bold mb-6">Videos</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {project.videos.map((videoId, index) => (
                             <motion.div

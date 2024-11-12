@@ -10,17 +10,19 @@ export default function Hero() {
       <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-16">
         {/* Left Column - Text Content */}
         <div className="w-full md:w-[45%] space-y-4 md:space-y-6">
-          <h1 className="text-4xl  md:text-5xl lg:text-6xl leading-[1.625] font-bold text-gray-900" style={{ lineHeight: "1.1" }}>
+          <h1 className="text-4xl hidden md:block md:text-5xl lg:text-6xl leading-[1.625] font-bold text-gray-900" style={{ lineHeight: "1.1" }}>
             <span className="text-blue-600 text-4xl">PJ Renders</span>
             <br />
             3D Rendering &
             <br />
             Interior Design
           </h1>
-          <p className="text-xl text-gray-600 max-w-lg">
+          <h1 className='text-4xl text-center md:hidden font-bold'><span className="text-blue-600 text-4xl">PJ Renders</span></h1>
+          <h1 className='text-4xl text-center md:hidden font-bold'>3D Rendering & Interior Design</h1>
+          <p className="text-xl text-gray-600 max-w-lg text-center md:text-left">
             Transforming concepts into stunning visual realities. I bring your architectural dreams to life through expert 3D visualization and photorealistic rendering.
           </p>
-          <div className="pt-4">
+          <div className="pt-4 text-center md:text-left">
             <Link
               to="/portfolio"
               className="inline-block px-8 py-3 bg-blue-600 text-white text-xl font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"

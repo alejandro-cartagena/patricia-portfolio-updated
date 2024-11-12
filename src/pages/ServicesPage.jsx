@@ -86,7 +86,7 @@ export default function ServicesPage() {
 
             {/* Description Section */}
             <div className="max-w-4xl mx-auto px-4 py-6 md:py-12">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-center md:text-left text-lg text-gray-700 leading-relaxed">
                     {service.description}
                 </p>
             </div>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
             {/* Benefits Section */}
             <div className="bg-gray-50 py-6 md:py-12">
                 <div className="max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8">Benefits</h2>
+                    <h2 className="text-center md:text-left text-3xl font-bold mb-8">Benefits</h2>
                     <div className="space-y-4">
                         {service.benefits.map((benefit, index) => (
                             <div key={index} className="flex items-start gap-3">
@@ -109,7 +109,7 @@ export default function ServicesPage() {
             {/* Image Carousel */}
             <div className="py-6 md:py-12">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8">Gallery</h2>
+                    <h2 className="text-center md:text-left text-3xl font-bold mb-8">Gallery</h2>
                     <div className="relative">
                         <div className="overflow-hidden" ref={emblaRef}>
                             <div className="flex">
@@ -157,7 +157,7 @@ export default function ServicesPage() {
             {service.videoLinks && service.videoLinks.length > 0 && (
                 <div className="py-6 md:py-12 bg-gray-50">
                     <div className="max-w-6xl mx-auto px-4">
-                        <h2 className="text-3xl font-bold mb-8">Videos</h2>
+                        <h2 className="text-center md:text-left text-3xl font-bold mb-8">Videos</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {service.videoLinks.map((videoId, index) => (
                                 <div
@@ -179,7 +179,7 @@ export default function ServicesPage() {
             {/* FAQ Accordion */}
             <div className="bg-gray-50 pt-6 md:pt-12 pb-12">
                 <div className="max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+                    <h2 className="text-center md:text-left text-3xl font-bold mb-8">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {service.faq.map((item, index) => (
                             <details 
