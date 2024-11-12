@@ -35,15 +35,16 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    isVisible && (
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-white text-2xl rounded transition-opacity duration-500 ease-in-out shadow-md"
-        aria-label="Scroll to top"
-      >
-        ↑
-      </button>
-    )
+    <div 
+      onClick={scrollToTop} 
+      className={`cursor-pointer fixed bottom-8 right-8 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-white text-2xl rounded shadow-md transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
+      aria-label="Scroll to top"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && scrollToTop()}
+    >
+      ↑
+    </div>
   );
 };
 
