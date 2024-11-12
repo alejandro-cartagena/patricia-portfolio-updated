@@ -32,6 +32,7 @@ export default function Services() {
                 src={service.cardThumbnail}
                 alt={service.title}
                 className="w-full h-48 object-cover"
+                loading='lazy'
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>

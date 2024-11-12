@@ -64,6 +64,7 @@ const GallerySection = () => {
                     width={photo.width}
                     height={photo.height}
                     className="w-full h-auto object-cover transform transition-transform duration-300 ease-in-out hover:scale-110"
+                    loading='lazy'
                   />
                 </div>
               </div>
