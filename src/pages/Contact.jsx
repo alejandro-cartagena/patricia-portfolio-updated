@@ -85,8 +85,8 @@ const Contact = () => {
   return (
     <div className="max-w-2xl mx-auto py-10 md:py-32 px-4">
       <div className="space-y-6">
-        <h1 className="text-center md-text:left text-4xl font-bold">Contact Us</h1>
-        <p className="text-center md-text:left text-gray-600 text-lg">
+        <h1 className="text-center md:text-left text-4xl font-bold">Contact Us</h1>
+        <p className="text-center md:text-left text-gray-600 text-lg">
           Fill out the form below and we'll get back to you as soon as possible.
         </p>
 
