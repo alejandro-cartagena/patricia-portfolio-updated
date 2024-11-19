@@ -31,14 +31,9 @@ export default function Home() {
         >
             <Hero />
         </motion.div>
-        <motion.div 
-            ref={servicesRef}
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: isServicesInView ? 1 : 0, y: isServicesInView ? 0 : 20 }} 
-            transition={{ duration: 0.5, delay: 0.1 }} // Staggered effect
-        >
-            <Services />
-        </motion.div>
+        
+        <Services />
+        
         <motion.div 
             ref={galleryRef}
             initial={{ opacity: 0, y: 20 }} 
