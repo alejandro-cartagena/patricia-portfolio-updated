@@ -16,7 +16,7 @@ export default function Home() {
   const bookcallRef = useRef(null);
 
   const isHeroInView = useInView(heroRef, { once: true });
-  const isServicesInView = useInView(servicesRef, { once: true });
+//   const isServicesInView = useInView(servicesRef, { once: true });
   const isGalleryInView = useInView(galleryRef, { once: true });
   const isBenefitsInView = useInView(benefitsRef, { once: true });
   const isBookcallInView = useInView(bookcallRef, { once: true });
